@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Boot CSS */
+
+.center {
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w33 {
+    width: 33.33%;
+}
+
+.h50 {
+    height: 50%;
+}
+
+/**** Estilização do Site ****/
+
+.Mobile-menu {
+    display: none;
+}
+
+header {
+    background-color: #3d437a;
+    padding: 10px 0;
+}
+
+header .center {
+    justify-content: space-between;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header li {
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+section.banner-principal {
+    height: 600px;
+    background: url("../img/img-bg.jpg") no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+section.banner-principal h1 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+section form {
+    padding: 1%;
+    height: 200px;
+    width: 100%;
+    max-width: 500px;
+    align-items: space-evenly;
+}
+
+section form input[type="email"] {
+    margin: 10px 0;
+    width: 80%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 2%;
+    font-size: 1.25em;
+}
+
+section form input[type=submit] {
+    margin: 10px 0;
+    width: 80%;
+    height: 45px;
+    line-height: 45px;
+    border: 0;
+    background-color: rgb(49, 145, 127);
+    color: white;
+    font-size: 1.5em;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+section form input[type=submit]:hover {
+    background-color: rgb(37, 112, 98);
+}
+
+section.informativo {
+    height: 450px;
+    padding: 2%;
+}
+
+section.informativo div {
+    padding: 1%;
+    height: 100%;
+    align-items: center;
+}
+
+section.informativo h2, section.informativo p {
+    padding: 1%;
+}
+
+section.informativo div img {
+    width: 60%;
+}
+
+section.especialidades {
+    height: 300px;
+    padding: 2%;
+    background-color: #eee;
+}
+
+section.especialidades .center {
+    height: 100%;
+}
+
+section.especialidades .title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+section .box-especialidade i {
+    color: #3d437a;
+    font-size: 4em;
+}
+
+section .box-especialidade {
+    height: 85%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+}
+
+section .box-especialidade h3 {
+    font-weight: 300;
+}
+
+section .box-especialidade p{
+    font-weight: 300;
+}
+
+section.depoimentos {
+    background-color: #4e56b8;
+    padding: 2%;
+    color: white;
+}
+
+section.depoimentos .flex {
+    align-items: flex-start;
+}
+
+section.depoimentos h2, section.depoimentos p, section.depoimentos li {
+    padding: 2%;
+    font-weight: 300;
+}
+
+section.depoimentos .depoimento-single {
+    padding: 2% 0;
+}
+
+section.depoimentos .w50 {
+    padding: 2%;
+}
+
+footer {
+    padding: 1%;
+    background-color: #3d437a;
+    color: white;
+    text-align: center;
+}
+
+footer.fixed {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+section.erro404 {
+    height: 80vh;
+}
+
+section.erro404 .flex {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section.erro404 h1 {
+    font-size: 34px;
+    font-weight: 300;
+    padding: 20px;
+}
+
+section.contato {
+    height: 80vh;
+}
+
+section.contato .flex {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+section.contato form {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.contato form textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 5px;
+    resize: none;
+}
+
+section.contato h1 {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+@media screen and (max-width:768px) {
+    section.informativo {
+        height: auto;
+    }
+    
+    section.informativo div {
+        width: 100%;
+    }
+    
+    section.informativo div img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .w50 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .Desktop-menu {
+        display: none;
+    }
+
+    .Mobile-menu {
+        display: block;
+    }
+
+    .Mobile-menu ul {
+        display: none;
+        text-align: center;
+        width: 30%;
+        z-index: 3;
+        position: absolute;
+        top: 50px;
+        right: 3%;
+        background-color: #3d437a;
+    }
+
+    .Mobile-menu ul li {
+        border: 1px solid white;
+    }
+
+    .Mobile-menu .Mobile-menu-button {
+        padding: 5px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    section.especialidades {
+        height: auto;
+    }
+
+    .w33 {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    section .box-especialidade h3 {
+        font-weight: 300;
+        padding: 1%;
+    }
+    
+    section .box-especialidade p{
+        font-weight: 300;
+        padding: 1%;
+        text-align: center;
+    }
+}
