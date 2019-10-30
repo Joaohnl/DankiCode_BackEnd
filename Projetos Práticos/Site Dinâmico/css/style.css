@@ -75,18 +75,55 @@ header a {
 }
 
 section.banner-principal {
+    position: relative;
     height: 600px;
-    background: url("../img/img-bg.jpg") no-repeat;
-    background-size: cover;
     text-align: center;
 }
 
-section.banner-principal h1 {
+section.banner-principal .banner-single {
     width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-    font-weight: 300;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.banner-principal .overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.4);
+}
+
+section.banner-principal .slider-bullets {
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+}
+
+section.banner-principal .slider-bullets span {
+    display: inline-block;
+    margin: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+section.banner-principal .slider-bullets .active-bullet {
+    background-color: white;
+}
+
+section.banner-principal .center {
+    z-index: 4;
 }
 
 section form {
@@ -95,6 +132,14 @@ section form {
     width: 100%;
     max-width: 500px;
     align-items: space-evenly;
+}
+
+section.banner-principal h1 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
 }
 
 section form input[type="email"] {
@@ -254,11 +299,27 @@ section.contato form {
     align-items: center;
 }
 
+section.contato form input[type="text"] {
+    width: 80%;
+    height: 36px;
+    line-height: 36px;
+    margin: 10px 0;
+    padding-left: 10px;
+    border: 1px solid rgba(49, 145, 127, 0.5);
+    font-weight: 300;
+}
+
+section.contato form input[type="text"]:focus, section.contato form textarea:focus {
+    outline: 2px solid rgb(49, 145, 127);
+}
+
 section.contato form textarea {
     width: 80%;
     margin: 10px 0;
     padding: 5px;
     resize: none;
+    border: 1px solid rgba(49, 145, 127, 0.5);
+    font-weight: 300;
 }
 
 section.contato h1 {
@@ -301,7 +362,7 @@ section.contato h1 {
         display: none;
         text-align: center;
         width: 30%;
-        z-index: 3;
+        z-index: 99;
         position: absolute;
         top: 50px;
         right: 3%;

@@ -25,8 +25,7 @@ Class Email {
                                   
                 $this->phpMailer->isHTML(true);                                        // Set email format to HTML
 
-
-                //Recipients
+                //Por Default, o disparo irá mandar do email configurado no servidor SMTP.    
                 $this->phpMailer->setFrom(SMTP_USERNAME, EMAIL_NOME);
 
                 // Attachments
@@ -39,9 +38,16 @@ Class Email {
 
         }
 
+
+        //Recipients
         public function addAddress ($email, $nome) {
             $this->phpMailer->addAddress($email, $nome);
         }
+
+        public function setFrom ($email, $nome) {
+            $this->phpMailer->setFrom($email, $nome);
+        }   
+
         
         // Content
         public function conteudoEmail ($conteudo) {

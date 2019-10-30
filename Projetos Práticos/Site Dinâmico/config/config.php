@@ -1,6 +1,6 @@
 <?php 
 
-    define('INCLUDE_PATH', 'http://localhost/Projetos Práticos/Site Dinâmico/');
+    define('INCLUDE_PATH', 'http://localhost/DankiCode_BackEnd/Projetos Práticos/Site Dinâmico/');
     define('SMTP_HOST', 'smtp.gmail.com');
     define('SMTP_USERNAME', 'joaohnl@gmail.com');
     define('SMTP_PASSWORD', 'h3nR1qu&');

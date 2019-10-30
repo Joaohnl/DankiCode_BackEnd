@@ -29,12 +29,19 @@
 
 
 <section class="banner-principal flex">
+    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg.jpg');" class="banner-single"></div>
+    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg2.jpg');" class="banner-single"></div>
+    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg3.jpg');" class="banner-single"></div>
+    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg4.jpg');" class="banner-single"></div>
+    <div class="overlay"></div>
     <div class="center">
         <form class="flex" method="post" action="">
             <h1>Qual o seu melhor e-mail?</h1>
             <input class="w100" type="email" name="email" required />
             <input class="w100" type="submit" name="acao" value="Cadastrar!">
         </form>
+    </div>
+    <div class="slider-bullets">
     </div>
 </section>
 <!-- /.banner-principal -->
