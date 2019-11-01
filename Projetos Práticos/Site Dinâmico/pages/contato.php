@@ -11,7 +11,8 @@
             <button class="buttonLoad" style="display: none">
                 <img src="<?php echo INCLUDE_PATH;?>img/ajax-loader.gif">
             </button>
-            <div class="retornoForm"></div>
+            <div id="retornoSucesso" class="retornoForm">Formulário enviado com sucesso!</div>
+            <div id="retornoFalha" class="retornoForm">Falha ao enviar o formulário!</div>
         </form>
     </div>
 </section>

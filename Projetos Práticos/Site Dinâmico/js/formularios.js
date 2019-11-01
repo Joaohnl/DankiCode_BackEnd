@@ -24,23 +24,19 @@ $(function() {
             inputs.removeAttr('disabled');
 
             if (resposta.retorno) {
-                
                 //Formulário enviado com sucesso
                 //Setando notificação como sucesso e aplicando animação   
-                $('form .retornoForm').attr('id', 'retornoSucesso').append('Formulário enviado com sucesso!').fadeIn(1000);         
-                setTimeout(function() {
-                    $('form .retornoForm').fadeOut(1000);
-                }, 6000);
-
+                $('form #retornoSucesso').fadeIn(1000);
             } else {
                 //Falha no form
                 //Setando notificação como falha
-                $('form .retornoForm').attr('id', 'retornoFalha').append('Falha ao enviar o formulário!').fadeIn(1000);
-                setTimeout(function() {
-                    $('form .retornoForm').fadeOut(1000);
-                }, 6000);
-                
+                $('form #retornoFalha').fadeIn(1000);                
             }
+
+            //Apaga notificação após 5 segundos
+            setTimeout(function() {
+                $('form .retornoForm').fadeOut(1000);
+            }, 5000);
         });
         return false;
     })

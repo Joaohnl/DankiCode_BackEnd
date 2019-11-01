@@ -24,6 +24,8 @@
     } else {
         $resposta['retorno'] = false;
     }
-    
+  
+    $resposta['retorno'] = true;
+
     die(json_encode($resposta));
 ?>

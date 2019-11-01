@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: #ccc;
+}
+
+.w100{
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 90%;
+    max-width: 400px;
+    height: 400px;
+    margin: 10px;
+    padding: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3d437a;
+    box-shadow: 5px 5px 5px;
+}
+
+.login form {
+    width: 100%;
+    height: 100%;
+}
+
+.login form h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 34px;
+    text-shadow: 2px 2px #000;
+}
+
+form button {
+    display: none;
+}
+
+form .retornoForm {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 35px;
+    padding: 10px 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#retornoSucesso {
+    background-color: rgb(128, 233, 163);
+    border: 2px solid rgb(31, 182, 76);
+}
+
+#retornoFalha {
+    background-color: #ff9393;
+    border: 5px solid #be3333;
+}
+
+#retornoBD {
+    background-color: #ff9393;
+    border: 5px solid #be3333;
+}
+
+.login input.submit, .login button {
+    text-shadow: 1px 1px #000;
+    margin: 10px 0;
+    width: 90%;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    background-color: rgb(49, 145, 127);
+    color: white;
+    font-size: 1.5em;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.login input.submit:hover {
+    background-color: rgb(37, 112, 98);
+}
+
+.login input[type="text"], .login input[type="password"] {
+    margin: 10px 0;
+    width: 90%;
+    padding-left: 10px;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.login input[type="text"]:hover, .login form input[type="password"]:hover {
+   outline: 2px solid rgb(49, 145, 127);
+}

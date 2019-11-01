@@ -1,0 +1,1 @@
+<?php echo 'BEM VINDO, '.$_SESSION['user']?>
