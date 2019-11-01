@@ -151,7 +151,7 @@ section form input[type="email"] {
     font-size: 1.25em;
 }
 
-section form input[type=submit] {
+section form input.submit, section form button {
     margin: 10px 0;
     width: 80%;
     height: 45px;
@@ -162,6 +162,32 @@ section form input[type=submit] {
     font-size: 1.5em;
     font-weight: lighter;
     cursor: pointer;
+}
+
+section form button {
+    display: none;
+}
+
+form .retornoForm {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 35px;
+    padding: 0 10px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#retornoSucesso {
+    background-color: rgb(128, 233, 163);
+    border: 2px solid rgb(31, 182, 76);
+}
+
+#retornoFalha {
+    background-color: #ff9393;
+    border: 5px solid #be3333;
 }
 
 section form input[type=submit]:hover {
@@ -299,7 +325,7 @@ section.contato form {
     align-items: center;
 }
 
-section.contato form input[type="text"] {
+section.contato form input[type="text"], section.contato form input[type="email"] {
     width: 80%;
     height: 36px;
     line-height: 36px;
@@ -309,7 +335,7 @@ section.contato form input[type="text"] {
     font-weight: 300;
 }
 
-section.contato form input[type="text"]:focus, section.contato form textarea:focus {
+section.contato form input[type="text"]:focus, section.contato form textarea:focus, section.contato form input[type="email"]:focus {
     outline: 2px solid rgb(49, 145, 127);
 }
 

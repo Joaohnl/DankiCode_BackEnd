@@ -58,10 +58,8 @@ Class Email {
         
         public function enviarEmail () {
             if($this->phpMailer->send()) {
-                echo '<script> alert("Mensagem enviada com sucesso!")</script>';
                 return true;
             } else {
-                echo '<script> alert("Mensagem não pode ser enviada! Erro mailer: {'.$this->phpMailer->ErrorInfo.'})</script>';
                 return false;
             }
         }

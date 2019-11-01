@@ -1,4 +1,11 @@
-<?php include('config/config.php') ?>
+<?php 
+    //Autoload do COMPOSER
+    require_once 'vendor/autoload.php';
+        
+    use classes\Email;
+    include('config.php');
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -12,9 +19,10 @@
     <meta name="description" content="Site Dinâmico realizado para o curso da DankiCode" />
 </head>
 <body>
+    <base baseurl="<?php echo INCLUDE_PATH; ?>" />
     <header>
         <div class="center flex">
-            <a href=""><div class="logo">Logomarca</div></a>
+            <a href="/"><div class="logo">Logomarca</div></a>
             <nav  class="Desktop-menu">
                 <ul class="flex">
                     <li><a href="<?php echo INCLUDE_PATH?>home">Home</a></li>
@@ -72,7 +80,9 @@
     </footer>
 
     <script src="<?php echo INCLUDE_PATH?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH?>js/constants.js"></script>
     <script src="<?php echo INCLUDE_PATH?>js/scripts.js"></script>
+    <script src="<?php echo INCLUDE_PATH?>js/formularios.js"></script>
     <?php if ($url == 'home') { ?>
         <script src="<?php echo INCLUDE_PATH?>js/slider.js"></script>
     <?php } ?>

@@ -1,4 +1,12 @@
 {
+    "name": "João Loureiro",
+    "description": "Site de para estudo de caso do Jean Piaget",
+    "authors": [
+        {
+            "name": "João Loureiro",
+            "email": "joaohnl@gmail.com"
+        }
+    ],
     "require": {
         "phpmailer/phpmailer": "^6.1"
     }

@@ -1,33 +1,3 @@
-<?php 
-
-    if (isset($_POST['acao'])) {
-        //Form enviado, verificar campo email
-        if ($_POST['email'] != "") {
-            // Há informação no campo de email
-            $email = $_POST['email'];
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // TUDO CERTO, É UM EMAIL!
-                // PODE ENVIAR
-
-                $phpmail = new Email();
-                $content = array('assunto' => 'Há um novo e-mail cadastrado no site!', 'corpo' => $email);
-                
-                
-                $phpmail->addAddress(EMAIL_RECEIVER, EMAIL_NOME);
-                $phpmail->conteudoEmail($content);
-                $phpmail->enviarEmail();
-                
-            } else {
-                echo '<script> alert("Favor inserir um email válido!" </script>)';
-            }
-        } else {
-            echo '<script> alert("Favor preencher o campo de e-mail!" </script>)';
-        }
-    }
-
-?>
-
-
 <section class="banner-principal flex">
     <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg.jpg');" class="banner-single"></div>
     <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg2.jpg');" class="banner-single"></div>
@@ -35,10 +5,14 @@
     <div style="background-image: url('<?php echo INCLUDE_PATH; ?>img/img-bg4.jpg');" class="banner-single"></div>
     <div class="overlay"></div>
     <div class="center">
-        <form class="flex" method="post" action="">
+        <form class="flex" method="post">
             <h1>Qual o seu melhor e-mail?</h1>
             <input class="w100" type="email" name="email" required />
-            <input class="w100" type="submit" name="acao" value="Cadastrar!">
+            <input class="w100 submit" type="submit" name="acao" value="Cadastrar!">
+            <button class="buttonLoad" style="display: none">
+                <img src="<?php echo INCLUDE_PATH;?>img/ajax-loader.gif">
+            </button>
+            <div class="retornoForm"></div>
         </form>
     </div>
     <div class="slider-bullets">

@@ -1,0 +1,1 @@
+const INCLUDE_PATH = $('base').attr('baseurl');

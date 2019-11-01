@@ -1,5 +1,4 @@
 <?php 
-
     define('INCLUDE_PATH', 'http://localhost/DankiCode_BackEnd/Projetos Práticos/Site Dinâmico/');
     define('SMTP_HOST', 'smtp.gmail.com');
     define('SMTP_USERNAME', 'joaohnl@gmail.com');
@@ -7,15 +6,14 @@
     define('EMAIL_RECEIVER', 'joaohnl@gmail.com');
     define('EMAIL_NOME', 'João');
 
-    //Autoload do COMPOSER
-    require 'vendor/autoload.php';
     
     //Autoload de classes criadas
-    $autoload = function($class) {
-        if (file_exists('classes/'.$class.'.php')) {
-            include('classes/'.$class.'.php');
-        }
-    };
+    $autoload = function($class){
+		if($class == 'Email'){
+			require_once('vendor/autoload.php');
+		}
+		include('classes/'.$class.'.php');
+	};
 
-    spl_autoload_register($autoload);
+	spl_autoload_register($autoload);
 ?>
