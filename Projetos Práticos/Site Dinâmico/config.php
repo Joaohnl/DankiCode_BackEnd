@@ -3,7 +3,7 @@
     define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/');
     define('SMTP_HOST', 'smtp.gmail.com');
     define('SMTP_USERNAME', 'joaohnl@gmail.com');
-    define('SMTP_PASSWORD', 'h3nR1qu&');
+    define('SMTP_PASSWORD', );
     define('EMAIL_RECEIVER', 'joaohnl@gmail.com');
     define('EMAIL_NOME', 'João');
     define('HOST', 'localhost');
